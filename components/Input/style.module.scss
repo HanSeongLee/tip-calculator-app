@@ -1,0 +1,35 @@
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 19.26px;
+    transform: translateY(-50%);
+  }
+
+  .input {
+    width: 100%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #00474B;
+    background: #F3F9FA;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 6px 17.48px 6px 40px;
+
+    &[type="number"] {
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    }
+  }
+}

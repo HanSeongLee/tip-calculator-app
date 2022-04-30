@@ -1,7 +1,20 @@
+@import "styles/utils";
 
 .inputWrapper {
   position: relative;
   display: flex;
+
+  &.hasIcon {
+    .input {
+      padding: 6px 17.48px 6px 40px;
+    }
+  }
+
+  &.error {
+    .input {
+      border-color: #E17052 !important;
+    }
+  }
 
   .icon {
     position: absolute;
@@ -11,7 +24,9 @@
   }
 
   .input {
+    position: relative;
     width: 100%;
+    height: 48px;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
@@ -19,9 +34,21 @@
     color: #00474B;
     background: #F3F9FA;
     border-radius: 5px;
-    border: none;
+    border: 2px solid #F3F9FA;
     outline: none;
-    padding: 6px 17.48px 6px 40px;
+    padding: 6px 17.48px 6px 6px;
+
+    @include media(">desktop") {
+      padding: 6px 17px 6px 17px;
+    }
+
+    &::placeholder {
+      color: rgba(0, 71, 75, 0.35);
+    }
+
+    &:focus {
+      border: 2px solid #26C2AE;
+    }
 
     &[type="number"] {
       &::-webkit-inner-spin-button,

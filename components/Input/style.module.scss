@@ -44,7 +44,11 @@
     }
 
     &::placeholder, &:-moz-placeholder, &::-webkit-input-placeholder {
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
       color: rgba(0, 71, 75, 0.35);
+      opacity: 1;
     }
 
     &:focus {

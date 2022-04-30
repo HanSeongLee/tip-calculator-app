@@ -1,5 +1,8 @@
 import type { NextPage } from 'next'
+import styles from './style.module.scss';
 import Head from 'next/head';
+import Header from '../components/Header';
+import TipCalculator from '../containers/TipCalculator';
 
 const Home: NextPage = () => {
   return (
@@ -53,7 +56,9 @@ const Home: NextPage = () => {
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png"/>
         </Head>
 
-        <main>
+        <main className={styles.main}>
+          <Header />
+          <TipCalculator className={styles.tipCalculator} />
         </main>
       </>
   );

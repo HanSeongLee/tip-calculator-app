@@ -14,5 +14,10 @@
     border-radius: 5px;
     border: none;
     cursor: pointer;
+
+    &.active {
+      color: #00474B;
+      background: #26C2AE;
+    }
   }
 }

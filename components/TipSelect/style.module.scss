@@ -1,8 +1,14 @@
+@import "styles/utils";
 
 .tipSelect {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 16px;
+
+  @include media(">desktop") {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 14px;
+  }
 
   .button {
     height: 48px;
@@ -15,9 +21,29 @@
     border: none;
     cursor: pointer;
 
+    @include media(">desktop") {
+      transition: background 0.3s;
+
+      &:hover {
+        background: #9FE8DF;
+      }
+    }
+
     &.active {
       color: #00474B;
       background: #26C2AE;
+    }
+  }
+
+  .customInput {
+    input {
+      @include media(">desktop") {
+        padding: 6px 13px 6px 12px;
+      }
+
+      &::placeholder {
+        color: #547878;
+      }
     }
   }
 }

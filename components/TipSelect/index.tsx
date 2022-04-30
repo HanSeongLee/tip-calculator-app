@@ -1,4 +1,4 @@
-import React, {HTMLAttributes, useState} from 'react';
+import React, {HTMLAttributes} from 'react';
 import styles from './style.module.scss';
 import Input from '../Input';
 import cn from 'classnames';
@@ -7,14 +7,13 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
     name: string;
     tips: number[];
     onSelectChange: (name: string, value: any) => void;
+    selected: string;
 };
 
 const TipSelect: React.FC<IProps> = ({
                                          name, tips, onSelectChange, className,
-                                         ...props
+                                         selected, ...props
                                      }) => {
-    const [selected, setSelected] = useState('');
-
     return (
         <div className={cn(styles.tipSelect, className)}
              {...props}
@@ -27,7 +26,7 @@ const TipSelect: React.FC<IProps> = ({
                         key={index}
                         onClick={_ => {
                             onSelectChange(name, tip);
-                            setSelected(`tip-button-${tip}`);
+                            onSelectChange('tipSelected', `tip-button-${tip}`);
                         }}
                 >
                     {tip}%
@@ -38,7 +37,7 @@ const TipSelect: React.FC<IProps> = ({
                    min={0}
                    onChange={e => {
                        onSelectChange(name, e.target.value);
-                       setSelected('');
+                       onSelectChange('tipSelected', '');
                    }}
             />
         </div>

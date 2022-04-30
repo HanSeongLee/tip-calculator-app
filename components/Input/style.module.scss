@@ -43,7 +43,7 @@
       padding: 6px 17px 6px 17px;
     }
 
-    &::placeholder {
+    &::placeholder, &:-moz-placeholder, &::-webkit-input-placeholder {
       color: rgba(0, 71, 75, 0.35);
     }
 

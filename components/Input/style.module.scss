@@ -44,9 +44,9 @@
     }
 
     &::placeholder, &:-moz-placeholder, &::-webkit-input-placeholder {
-      font-weight: inherit;
-      font-size: inherit;
-      line-height: inherit;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
       color: rgba(0, 71, 75, 0.35);
       opacity: 1;
     }
